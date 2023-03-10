@@ -20,18 +20,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Install poetry
         run: pipx install poetry
+
       - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
           cache: 'poetry'
+
       - name: Install dependencies
         run: poetry install
-        # Setup mosquitto broker for running tests
-      - name: Setup mosquitto
-        run: |
-          docker run -d -v "${GITHUB_WORKSPACE}/tests/mosquitto.conf:/mosquitto/config/mosquitto.conf" -p 1883:1883 eclipse-mosquitto
-      - name: Run tests
-        run: poetry run pytest
+
+      # Disable until we actually have tests
+      # - name: Run tests
+      #   run: poetry run pytest
