@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "ha-mqtt-discoverable-cli"
+version = "0.1.0"
+description = "CLI tools for the ha-mqtt-discoverable module"
+authors = ["Joe Block <jpb@unixorn.net>"]
+readme = "README.md"
+packages = [{include = "ha_mqtt_discoverable_cli"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0.0"
+ha-mqtt-discoverable = "^0.7.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+flake8 = "^6.0.0"
+pre-commit = "^3.1.1"
+pytest = "^7.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+hmd = 'ha_mqtt_discoverable_cli.hmd:hmd_driver'
+hmd-create-binary-sensor = 'ha_mqtt_discoverable_cli.sensor_driver:create_binary_sensor'
+hmd-create-device = 'ha_mqtt_discoverable_cli.device_driver:create_device'
+hmd-version = 'ha_mqtt_discoverable_cli:module_version'
