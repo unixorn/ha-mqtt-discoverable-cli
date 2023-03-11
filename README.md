@@ -29,7 +29,7 @@ It is a group of wrappers for the [ha-mqtt-discoverable](https://github.com/unix
 
 ### Native install
 
-`pip install ha-mqtt-discoverable-cli` will install the cli tools. If you prefer to keep your system python clear of extra modules,
+`pip install ha-mqtt-discoverable-cli` will install the cli tools. If you prefer to keep your system python clear of extra modules, use the `unixorn/ha-mqtt-discoverable-cli` docker image.
 
 ### Docker
 
