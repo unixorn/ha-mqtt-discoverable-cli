@@ -33,6 +33,5 @@ jobs:
       - name: Install dependencies
         run: poetry install
 
-      # Disable until we actually have tests
-      # - name: Run tests
-      #   run: poetry run pytest
+      - name: Run tests
+        run: poetry run pytest
