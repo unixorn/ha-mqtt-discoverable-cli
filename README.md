@@ -23,7 +23,7 @@
 
 This repository contains CLI scripts for CRUD operations on MQTT entities that will be autodetected by Home Assistant.
 
-It is a group of wrappers for the [ha-mqtt-discoverable](https://github.com/unixorn/ha-mqtt-discoverable-cli) python module.
+It is a group of wrappers for the [ha-mqtt-discoverable](https://github.com/unixorn/ha-mqtt-discoverable) python module.
 
 ## Installing
 
