@@ -1,8 +1,8 @@
-FROM python:3.10
+FROM python:3.10-slim
 
 ARG application_version
 LABEL maintainer="Joe Block <jpb@unixorn.net>"
-LABEL description="ha-mqtt-discoverable utility image"
+LABEL description="ha-mqtt-discoverable-cli utility image"
 LABEL version=${application_version}
 
 RUN apt-get update && \

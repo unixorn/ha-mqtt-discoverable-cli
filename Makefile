@@ -40,10 +40,10 @@ local: wheel requirements.txt ## Makes a docker image for only the architecture 
 	docker buildx build --load -t unixorn/ha-mqtt-discoverable-cli:testing -f Dockerfile.testing .
 
 trial: wheel
-	docker buildx build --no-cache --build-arg application_version=${MODULE_VERSION} --load -t unixorn/ha-mqtt-discoverable:$(MODULE_VERSION) .
+	docker buildx build --no-cache --build-arg application_version=${MODULE_VERSION} --load -t unixorn/ha-mqtt-discoverable-cli:$(MODULE_VERSION) .
 
 multiarch_image: wheel ## Makes a multi-architecture docker image for linux/arm64, linux/amd64 and linux/arm/v7 and pushes it to dockerhub
-	docker buildx build --no-cache --build-arg application_version=${MODULE_VERSION} --platform linux/arm64,linux/amd64,linux/arm/v7 --push -t unixorn/ha-mqtt-discoverable:$(MODULE_VERSION) .
+	docker buildx build --no-cache --build-arg application_version=${MODULE_VERSION} --platform linux/arm64,linux/amd64,linux/arm/v7 --push -t unixorn/ha-mqtt-discoverable-cli:$(MODULE_VERSION) .
 	make local
 
 wheel: clean format ## Builds a wheel for our modules. 'poetry' bakes the dependencies into the wheel metadata.
