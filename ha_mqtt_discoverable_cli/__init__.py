@@ -19,3 +19,16 @@ __version__ = metadata.version(__package__)
 
 def module_version():
     print(__version__)
+
+
+def module_info():
+    m = metadata.metadata(__package__)
+    print(m["Summary"])
+    print(f"Version: {__version__}")
+    print()
+    print("Commands:")
+    for command_name in metadata.entry_points()["console_scripts"]:
+        if command_name.value.split(".")[0] == __package__:
+            print(f" - {command_name.name}")
+    print()
+    print("Run commands with '--help' for usage details.")

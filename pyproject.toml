@@ -24,4 +24,6 @@ build-backend = "poetry.core.masonry.api"
 hmd = 'ha_mqtt_discoverable_cli.hmd:hmd_driver'
 hmd-create-binary-sensor = 'ha_mqtt_discoverable_cli.sensor_driver:create_binary_sensor'
 hmd-create-device = 'ha_mqtt_discoverable_cli.device_driver:create_device'
+hmd-info = 'ha_mqtt_discoverable_cli:module_info'
+hmd-module-info = 'ha_mqtt_discoverable_cli:module_info'
 hmd-version = 'ha_mqtt_discoverable_cli:module_version'
