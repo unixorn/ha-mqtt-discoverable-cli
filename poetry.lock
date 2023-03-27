@@ -197,14 +197,14 @@ files = [
 
 [[package]]
 name = "ha-mqtt-discoverable"
-version = "0.8.0"
+version = "0.8.1"
 description = ""
 category = "main"
 optional = false
 python-versions = ">=3.10.0,<4.0"
 files = [
-    {file = "ha_mqtt_discoverable-0.8.0-py3-none-any.whl", hash = "sha256:291bc7c44594ce7e32d7cfee12238d6e6104555a18e71d676b00198471e05674"},
-    {file = "ha_mqtt_discoverable-0.8.0.tar.gz", hash = "sha256:e3c5ad40132dc278172d1dfaf1f7dc50235d53547b21d50d23086682a719bf81"},
+    {file = "ha_mqtt_discoverable-0.8.1-py3-none-any.whl", hash = "sha256:a346034cca62c58ac27a0f144081e62d5245ebd97510ab837aa698b577092b5f"},
+    {file = "ha_mqtt_discoverable-0.8.1.tar.gz", hash = "sha256:1d8c67a51fee0d2561bf89a713a6f4f35ba33fcde3ee75cd7e16cc4e90b4e95f"},
 ]
 
 [package.dependencies]
