@@ -8,7 +8,7 @@ packages = [{include = "ha_mqtt_discoverable_cli"}]
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0.0"
-ha-mqtt-discoverable = "^0.8.1"
+ha-mqtt-discoverable = ">=0.8.1,<0.10.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.1.0"
