@@ -5,6 +5,7 @@ description = "CLI tools for the ha-mqtt-discoverable module"
 authors = ["Joe Block <jpb@unixorn.net>"]
 readme = "README.md"
 packages = [{include = "ha_mqtt_discoverable_cli"}]
+license = "Apache 2.0"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0.0"
