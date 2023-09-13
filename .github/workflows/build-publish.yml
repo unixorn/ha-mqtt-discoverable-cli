@@ -1,3 +1,4 @@
+---
 # This workflow will build a Python wheel, a Docker image containing the CLI tool and publish both to PyPi and DockerHub
 
 name: Build and publish
