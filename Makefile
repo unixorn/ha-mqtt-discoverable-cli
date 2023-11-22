@@ -18,7 +18,7 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 # If this pukes trying to import paho, try running 'poetry install'
-MODULE_VERSION=$(shell poetry run python3 -c 'from ha_mqtt_discoverable_cli import __version__;print(__version__)' )
+MODULE_VERSION=$(shell grep vers pyproject.toml | cut -d= -f2 | sed s/\"//g)
 
 version:
 	echo "version: $(MODULE_VERSION)"
@@ -44,7 +44,8 @@ trial: wheel
 
 multiarch_image: wheel ## Makes a multi-architecture docker image for linux/arm64, linux/amd64 and linux/arm/v7 and pushes it to dockerhub
 	docker buildx build --no-cache --build-arg application_version=${MODULE_VERSION} --platform linux/arm64,linux/amd64,linux/arm/v7 --push -t unixorn/ha-mqtt-discoverable-cli:$(MODULE_VERSION) .
-	make local
+	docker buildx build --no-cache --build-arg application_version=${MODULE_VERSION} --platform linux/arm64,linux/amd64,linux/arm/v7 --push -t unixorn/ha-mqtt-discoverable-cli .
+	docker pull unixorn/ha-mqtt-discoverable-cli
 
 wheel: clean format ## Builds a wheel for our modules. 'poetry' bakes the dependencies into the wheel metadata.
 	poetry build
