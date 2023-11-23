@@ -3,9 +3,9 @@ name: Check links in README
 
 on:
   push:
-    branches: [ '*' ]
+    branches: ['*']
   pull_request:
-    branches: [ '*' ]
+    branches: ['*']
 
 jobs:
   build:
