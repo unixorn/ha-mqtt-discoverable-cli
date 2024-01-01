@@ -167,13 +167,13 @@ files = [
 
 [[package]]
 name = "ha-mqtt-discoverable"
-version = "0.13.0"
+version = "0.13.1"
 description = ""
 optional = false
 python-versions = ">=3.10.0,<4.0"
 files = [
-    {file = "ha_mqtt_discoverable-0.13.0-py3-none-any.whl", hash = "sha256:a8beda5995075a449840f24697bbd64e7fe8559b58104c6cceccac5f384630f9"},
-    {file = "ha_mqtt_discoverable-0.13.0.tar.gz", hash = "sha256:501428ed0ba6f0955e6bb3075a55a74e9f08c1cf6dcb62bc47672281d49e280a"},
+    {file = "ha_mqtt_discoverable-0.13.1-py3-none-any.whl", hash = "sha256:27f7e7789326a00ab3a1fde0b3a0c0c1403157600c694b0284236681dc3b603f"},
+    {file = "ha_mqtt_discoverable-0.13.1.tar.gz", hash = "sha256:734bfb15f99b1098a37f131d4c18b78a790e7d7a6d7477a005b397db37a8b886"},
 ]
 
 [package.dependencies]
@@ -608,4 +608,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10,<4.0.0"
-content-hash = "901fc97c7ec5946f29fcd2be31bc1d449d4e16ba1a87c5f1b3b554abc760e035"
+content-hash = "651de377e5683e1cbb85b330f583e120db9b7d1e59ddfbd3ed3af466725d7ae2"
