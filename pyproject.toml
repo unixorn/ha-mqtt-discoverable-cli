@@ -12,10 +12,10 @@ python = ">=3.10,<4.0.0"
 ha-mqtt-discoverable = "^0.13.1"
 
 [tool.poetry.group.dev.dependencies]
-black = ">=23.1,<25.0"
 flake8 = ">=6,<8"
 pre-commit = "^3.1.1"
 pytest = ">=7.2.2,<9.0.0"
+ruff = "^0.4.4"
 
 [build-system]
 requires = ["poetry-core"]
