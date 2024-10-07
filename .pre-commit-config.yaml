@@ -2,13 +2,6 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
-  - repo: local
-    hooks:
-      - id: clean-up-pyc-and-pyo-files
-        name: Scrub all .pyc and .pyo files before committing
-        entry: ./hooks/clean-up-pyc-and-pyo-files
-        language: script
-
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
@@ -22,20 +15,20 @@ repos:
       - id: end-of-file-fixer
       - id: trailing-whitespace
 
-  - repo: https://github.com/psf/black
-    rev: "24.8.0"
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.6.8
     hooks:
-      - id: black
+      # Run the linter.
+      - id: ruff
+        args: [ --fix ]
+      # Run the formatter.
+      - id: ruff-format
 
   - repo: https://github.com/pycqa/flake8
     rev: '7.1.1'
     hooks:
       - id: flake8
-
-  - repo: https://github.com/thlorenz/doctoc
-    rev: v2.2.0
-    hooks:
-      - id: doctoc
 
   - repo: https://github.com/python-poetry/poetry
     rev: "1.8.0"
