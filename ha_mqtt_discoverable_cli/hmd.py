@@ -17,9 +17,7 @@ def hmd_usage():
     They called hdm with no subcommands, or we couldn't find a subcommand
     """
     myName = os.path.basename(sys.argv[0])
-    print(
-        f"{myName} calls subcommands - try '{myName} create device --help' for example."
-    )
+    print(f"{myName} calls subcommands - try '{myName} create device --help' for example.")
 
 
 def hmd_driver():

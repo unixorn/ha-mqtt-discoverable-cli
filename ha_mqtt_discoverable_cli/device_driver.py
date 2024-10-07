@@ -18,9 +18,7 @@ from ha_mqtt_discoverable.settings import device_settings
 
 
 def device_parser():
-    parser = create_base_parser(
-        description="Create a MQTT device entry that will be discoverable by Home Assistant"
-    )
+    parser = create_base_parser(description="Create a MQTT device entry that will be discoverable by Home Assistant")
     parser.add_argument(
         "--manufacturer",
         type=str,
@@ -39,9 +37,7 @@ def device_parser():
         required=True,
         help="What model for the created MQTT device",
     )
-    parser.add_argument(
-        "--unique-id", type=str, default="hmd_8675309", help="unique id."
-    )
+    parser.add_argument("--unique-id", type=str, default="hmd_8675309", help="unique id.")
     return parser
 
 
@@ -87,9 +83,7 @@ def create_device():
             continue
         if "configuration" not in metric_data:
             configuration = {"name": metric_data["name"], "value": metric_data["value"]}
-            logging.warning(
-                f"No configuration provided in {raw}, creating {configuration}"
-            )
+            logging.warning(f"No configuration provided in {raw}, creating {configuration}")
         else:
             configuration = metric_data["configuration"]
 
