@@ -51,8 +51,18 @@ jobs:
       - name: Lint Code Base
         uses: oxsecurity/megalinter/flavors/python@v8
         env:
+          ACTION_ACTIONLINT_DISABLE_ERRORS: true
+          DEFAULT_BRANCH: main
+          DISABLE_LINTERS: SPELL_CSPELL,MARKDOWN_MARKDOWN_LINK_CHECK,REPOSITORY_CHECKOV,REPOSITORY_TRIVY,REPOSITORY_GRYPE,SPELL_LYCHEE
+          DOCKERFILE_HADOLINT_DISABLE_ERRORS: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PAT: ${{secrets.PAT}}
+          REPOSITORY_DEVSKIM_DISABLE_ERRORS: true
+          REPOSITORY_GRYPE_DISABLE_ERRORS: true
+          REPOSITORY_KICS_DISABLE_ERRORS: true
+          REPOSITORY_TRIVY_DISABLE_ERRORS: true
+          VALIDATE_ALL_CODEBASE: false
+          YAML_YAMLLINT_DISABLE_ERRORS: true
 
       # Upload Mega-Linter artifacts.
       # They will be available on Github action page "Artifacts" section

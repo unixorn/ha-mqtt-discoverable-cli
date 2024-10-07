@@ -12,6 +12,7 @@
 - [Installing](#installing)
   - [Native install](#native-install)
   - [Docker](#docker)
+  - [ZSH Frameworks](#zsh-frameworks)
 - [Scripts Provided](#scripts-provided)
   - [`hmd`](#hmd)
   - [`hmd create binary sensor`](#hmd-create-binary-sensor)
@@ -23,19 +24,29 @@
 
 This repository contains CLI scripts for CRUD operations on MQTT entities that will be autodetected by Home Assistant.
 
-It is a group of wrappers for the [ha-mqtt-discoverable](https://github.com/unixorn/ha-mqtt-discoverable) python module.
+It is a set of wrapper scripts for the [ha-mqtt-discoverable](https://github.com/unixorn/ha-mqtt-discoverable) python module.
 
 ## Installing
 
 ### Native install
 
-`pip install ha-mqtt-discoverable-cli` will install the cli tools. If you prefer to keep your system python clear of extra modules, use the `unixorn/ha-mqtt-discoverable-cli` docker image.
+`pip install ha-mqtt-discoverable-cli` will install the cli tools. If you prefer to keep your system python clear of extra modules, you can use the `unixorn/ha-mqtt-discoverable-cli` docker image instead.
 
 ### Docker
 
 If you only need to use the command line tools, the simplest way is to use them with `docker` or `nerdctl`. It won't interfere with your system python and potentially cause you issues there.
 
 You can use the [unixorn/ha-mqtt-discoverable-cli](https://hub.docker.com/repository/docker/unixorn/ha-mqtt-discoverable-cli) image on dockerhub directly, but if you add `$reporoot/bin` to your `$PATH`, the `hmd` script there will automatically run the command line tools inside a docker container with `docker` or `nerdctl`, depending on what it finds in your `$PATH`.
+
+### ZSH Frameworks
+
+You can load the tools with your ZSH framework of choice by referring to `unixorn/ha-mqtt-discoverable-cli`.
+
+If you're using [Zgenom](https://github.com/jandamm/zgenom):
+
+1. Add `zgenom load unixorn/ha-mqtt-discoverable-cli` to your `.zshrc` along with your other `zgenom load` commands.
+2. `zgenom reset && zgenom save`
+
 
 ## Scripts Provided
 
