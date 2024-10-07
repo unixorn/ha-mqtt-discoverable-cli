@@ -17,18 +17,14 @@ from ha_mqtt_discoverable.settings import binary_sensor_settings
 
 
 def binary_sensor_parser():
-    parser = create_base_parser(
-        description="Create a binary sensor on MQTT that will be autodiscovered by Home Assistant"
-    )
+    parser = create_base_parser(description="Create a binary sensor on MQTT that will be autodiscovered by Home Assistant")
     parser.add_argument(
         "--state",
         type=str.upper,
         choices=["OFF", "ON"],
         help="Set the binary sensor's state",
     )
-    parser.add_argument(
-        "--metric-name", type=str, required=True, help="What metric to create"
-    )
+    parser.add_argument("--metric-name", type=str, required=True, help="What metric to create")
     return parser
 
 
