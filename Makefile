@@ -28,7 +28,7 @@ clean: ## Cleans out stale wheels, generated tar files, .pyc and .pyo files
 	find . -iname '*.py[co]' -delete
 
 format: ## Runs 'ruff' on all our python source files
-	poetry run ruff check .
+	poetry run ruff format .
 
 test: ## Run tests with 'nosetests'
 	nosestests -v
