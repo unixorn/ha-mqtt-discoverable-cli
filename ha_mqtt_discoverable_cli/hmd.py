@@ -1,7 +1,7 @@
 #
 # Gives us a git-style main command that calls subcommands.
 #
-# Copyright 2023: Joe Block <jpb@unixorn.net>
+# Copyright 2023-2024: Joe Block <jpb@unixorn.net>
 # License: Apache 2.0
 
 
@@ -9,7 +9,7 @@ import os
 import subprocess
 import sys
 
-from thelogrus.cli import find_subcommand
+from gitlike_commands import find_subcommand
 
 
 def hmd_usage():
