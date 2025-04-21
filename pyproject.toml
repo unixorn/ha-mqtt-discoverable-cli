@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ha-mqtt-discoverable-cli"
-version = "0.18.0"
+version = "0.19.1"
 description = "CLI tools for the ha-mqtt-discoverable module"
 authors = ["Joe Block <jpb@unixorn.net>"]
 readme = "README.md"
