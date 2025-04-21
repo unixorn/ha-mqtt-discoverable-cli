@@ -17,7 +17,7 @@
 Describe your changes in detail.
 
 If you are adding functionality and not just creating an entrypoint, that
-almost certainly belongs in the ha-mqtt-discoverable module instead.
+almost certainly belongs in https://github.com/unixorn/ha-mqtt-discoverable instead
 -->
 
 # License Acceptance
@@ -32,6 +32,7 @@ almost certainly belongs in the ha-mqtt-discoverable module instead.
 - [ ] Add/update link to an external resource like a blog post or video
 - [ ] Bug fix
 - [ ] New feature
+- [ ] New release
 - [ ] Test updates
 - [ ] Text cleanups/updates
 - [ ] Dependency updates
