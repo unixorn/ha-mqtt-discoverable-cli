@@ -70,7 +70,7 @@ Usage: `hmd create device --device-name coyote --device-id 8675309 --mqtt-user H
 
 ## Contributing
 
-Please run `black` on your code before submitting. There are `git` hooks already configured to run `black` and other checks before every commit, please run `pre-commit install` to enable them.
+Please run [ruff](https://docs.astral.sh/ruff/) on your code before submitting. There are `git` hooks already configured to run `ruff` and other checks before every commit, please run `pre-commit install` to enable them.
 
 ## Contributors
 
