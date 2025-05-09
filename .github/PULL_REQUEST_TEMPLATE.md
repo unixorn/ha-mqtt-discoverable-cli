@@ -31,6 +31,7 @@ almost certainly belongs in https://github.com/unixorn/ha-mqtt-discoverable inst
 - [ ] Add/update a helper script
 - [ ] Add/update link to an external resource like a blog post or video
 - [ ] Bug fix
+- [ ] Documentation update
 - [ ] New feature
 - [ ] New release
 - [ ] Test updates
