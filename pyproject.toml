@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ha-mqtt-discoverable-cli"
-version = "0.19.1.1"
+version = "0.20.0"
 description = "CLI tools for the ha-mqtt-discoverable module"
 authors = ["Joe Block <jpb@unixorn.net>"]
 readme = "README.md"
@@ -10,7 +10,7 @@ license = "Apache 2.0"
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0.0"
 gitlike-commands = "^0.3.0"
-ha-mqtt-discoverable = "^0.19.2"
+ha-mqtt-discoverable = "^0.20.0"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = ">=6,<8"
