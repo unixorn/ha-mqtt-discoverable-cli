@@ -4,6 +4,7 @@
 
 - [Description](#description)
 - [License Acceptance](#license-acceptance)
+- [Developer Certificate of Origin (DCO)](#developer-certificate-of-origin-dco)
 - [Type of changes](#type-of-changes)
 - [Checklist](#checklist)
 
