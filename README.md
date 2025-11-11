@@ -22,7 +22,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-This repository contains CLI scripts for CRUD operations on MQTT entities that will be autodetected by Home Assistant.
+This repository contains CLI scripts for CRUD operations on MQTT entities that will be automatically detected by Home Assistant.
 
 It is a set of wrapper scripts for the [ha-mqtt-discoverable](https://github.com/unixorn/ha-mqtt-discoverable) python module.
 
@@ -60,7 +60,7 @@ Uses the [gitlike-commands](https://github.com/unixorn/gitlike-commands/) module
 
 Create/Update a binary sensor and set its state.
 
-Usage: `hmd create binary sensor --device-name mfsmaster --device-id 8675309 --mqtt-user HASS_MQTT_USER --mqtt-password HASS_MQTT_PASSWORD --client-name inquisition --mqtt-server mqtt.unixorn.net --metric-name tamper --device-class motion --state off`
+Usage: `hmd create binary sensor --device-name mfsmaster --device-id 8675309 --name mfsbinarysensor --mqtt-user HASS_MQTT_USER --mqtt-password HASS_MQTT_PASSWORD --client-name inquisition --mqtt-server mqtt.unixorn.net --device-class motion --state off --unique-id mfsbinarysensor_unique-id`
 
 ### `hmd create device`
 
