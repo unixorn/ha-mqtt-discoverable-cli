@@ -27,7 +27,7 @@ def module_info():
     print(f"Version: {__version__}")
     print()
     print("Commands:")
-    for command_name in metadata.entry_points()["console_scripts"]:
+    for command_name in metadata.entry_points().select(group="console_scripts"):
         if command_name.value.split(".")[0] == __package__:
             print(f" - {command_name.name}")
     print()
