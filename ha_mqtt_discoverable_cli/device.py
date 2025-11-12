@@ -11,15 +11,18 @@ from ha_mqtt_discoverable import Discoverable, __version__
 from ha_mqtt_discoverable.utils import clean_string
 from ha_mqtt_discoverable_cli.utils import valid_configuration_key
 
+
 class SensorConfig(TypedDict):
     """Optional configuration of a sensor belonging to a device"""
+
     device: Optional[dict]
-    '''Optional information about the device this sensor belongs to. If not set defaults to the information of the device itself'''
+    """Optional information about the device this sensor belongs to. If not set defaults to the information of the device itself"""
     object_id: Optional[str]
     name: Optional[str]
-    '''Friendly name of this sensor. Default to the name given when adding the sensor to the device parent'''
+    """Friendly name of this sensor. Default to the name given when adding the sensor to the device parent"""
     unit_of_measurement: Optional[str]
     unique_id: Optional[str]
+
 
 class Device(Discoverable):
     def __init__(self, settings: dict = {}) -> None:
@@ -76,9 +79,7 @@ configured: {self.configured}
 
         return device
 
-    def add_metric(
-        self, name, value, unit_of_measurement: str = "%", configuration: SensorConfig = {}
-    ) -> None:
+    def add_metric(self, name, value, unit_of_measurement: str = "%", configuration: SensorConfig = {}) -> None:
         """
         Add a metric to our device
         """
@@ -98,15 +99,11 @@ configured: {self.configured}
 
         if "name" not in configuration:
             configuration["name"] = f"{name} {unit_of_measurement}"
-            logging.warning(
-                f"Name unset in configuration, using {configuration['name']}"
-            )
+            logging.warning(f"Name unset in configuration, using {configuration['name']}")
 
         if "unit_of_measurement" not in configuration:
             configuration["unit_of_measurement"] = unit_of_measurement
-            logging.warning(
-                f"No unit_of_measurement set, using {configuration['unit_of_measurement']}"
-            )
+            logging.warning(f"No unit_of_measurement set, using {configuration['unit_of_measurement']}")
 
         if "unique_id" not in configuration:
             configuration["unique_id"] = clean_string(f"{name}_{self.unique_id}")
@@ -119,9 +116,7 @@ configured: {self.configured}
         for c in configuration:
             logging.debug(f"checking {c}")
             if not valid_configuration_key(c) and c != "value":
-                raise RuntimeError(
-                    f"{configuration} contains {c} is not a valid configuration key for a device sensor."
-                )
+                raise RuntimeError(f"{configuration} contains {c} is not a valid configuration key for a device sensor.")
 
         metric_config = {
             "config_topic": f"{self.topic_prefix}/{name_for_topic}/config",
@@ -149,15 +144,11 @@ configured: {self.configured}
 
             config_message = json.dumps(self.configs[metric_config]["config_message"])
 
-            logging.info(
-                f"Writing {config_message} to {config_topic} for metric {metric_config}"
-            )
+            logging.info(f"Writing {config_message} to {config_topic} for metric {metric_config}")
             if self.debug:
                 logging.debug("Debug mode is {self.debug}, skipping publish")
             else:
-                pub = self.mqtt_client.publish(
-                    config_topic, config_message, retain=True
-                )
+                pub = self.mqtt_client.publish(config_topic, config_message, retain=True)
                 logging.debug(f"state publication results: {pub}")
                 self.configured[metric_config] = True
 
@@ -172,9 +163,7 @@ configured: {self.configured}
             state = self.metrics[metric]
             logging.debug(f"Writing {state} to {state_topic}")
             if self.debug:
-                logging.warning(
-                    f"Debug mode is {self.debug}, Skipping state publication"
-                )
+                logging.warning(f"Debug mode is {self.debug}, Skipping state publication")
             else:
                 pub = self.mqtt_client.publish(state_topic, state, retain=True)
                 logging.debug(f"state publication results: {pub}")

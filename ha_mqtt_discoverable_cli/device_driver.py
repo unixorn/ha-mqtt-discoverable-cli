@@ -11,7 +11,6 @@ import json
 import logging
 import sys
 
-from ha_mqtt_discoverable import DeviceInfo
 
 from ha_mqtt_discoverable_cli.cli import create_base_parser
 from ha_mqtt_discoverable_cli.device import Device
