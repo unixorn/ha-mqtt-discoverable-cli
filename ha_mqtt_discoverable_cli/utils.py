@@ -1,5 +1,7 @@
 from importlib import metadata
 
+import yaml
+
 HA_MQTT_DISCOVERABLE_CLI = metadata.version(__package__)
 HA_MQTT_DISCOVERABLE = metadata.version("ha-mqtt-discoverable")
 
@@ -447,3 +449,18 @@ def valid_configuration_key(name: str) -> bool:
     Confirm that a configuration key is in the allowed list
     """
     return name in CONFIGURATION_KEY_NAMES
+
+
+def read_yaml_file(path: str = None) -> dict:
+    """
+    Return the data structure contained in a yaml file
+
+    Args:
+        path (str): Path to read from
+
+    Returns:
+        Data decoded from YAML file content
+    """
+    with open(path) as yamlFile:
+        data = yaml.safe_load(yamlFile)
+        return data
