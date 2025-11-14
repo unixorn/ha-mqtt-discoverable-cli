@@ -15,7 +15,7 @@
 
 import logging
 
-from ha_mqtt_discoverable.utils import read_yaml_file
+from ha_mqtt_discoverable_cli.utils import read_yaml_file
 
 logger = logging.getLogger(__name__)
 
