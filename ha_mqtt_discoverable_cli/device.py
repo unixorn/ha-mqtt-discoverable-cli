@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
-#
-# Copyright 2022 Joe Block <jpb@unixorn.net>
+# Copyright 2022-2025 Joe Block <jpb@unixorn.net>
 # License: Apache 2.0
 
 import json
