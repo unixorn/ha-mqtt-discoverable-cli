@@ -72,7 +72,7 @@ jobs:
         env:
           PAT: ${{secrets.PAT}}
         if: ${{ success() }} || ${{ failure() }}
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: Mega-Linter reports
           path: |
