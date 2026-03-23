@@ -111,14 +111,14 @@ files = [
 
 [[package]]
 name = "ha-mqtt-discoverable"
-version = "0.24.1"
+version = "0.24.2"
 description = "Python library for creating MQTT entities compatible with Home Assistant"
 optional = false
 python-versions = "<4.0,>=3.10.0"
 groups = ["main"]
 files = [
-    {file = "ha_mqtt_discoverable-0.24.1-py3-none-any.whl", hash = "sha256:bdac58b69e70dff3f5eea0f0a5299923abb5b639e93efb2f7b292672182dda50"},
-    {file = "ha_mqtt_discoverable-0.24.1.tar.gz", hash = "sha256:fa165d1ec2f4de166627de0d21d57d57d1ffc5067ec6fbd1675f7c9d4a7d8c1d"},
+    {file = "ha_mqtt_discoverable-0.24.2-py3-none-any.whl", hash = "sha256:551c935dee0f29735516abf3c86daab2126fdf6035b2a28b5aef0ccadcfb3469"},
+    {file = "ha_mqtt_discoverable-0.24.2.tar.gz", hash = "sha256:ff33e228ba7be03655008cf8533bae78e8f584f3c7f65cf4794755e6e74696e6"},
 ]
 
 [package.dependencies]
