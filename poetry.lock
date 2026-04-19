@@ -99,14 +99,14 @@ pyflakes = ">=3.4.0,<3.5.0"
 
 [[package]]
 name = "gitlike-commands"
-version = "0.3.0"
+version = "0.3.1"
 description = "Makes driver scripts that enable git-like commands so that foo bar will run foo-bar"
 optional = false
-python-versions = ">=3.9,<4.0"
+python-versions = "<4.0,>=3.9"
 groups = ["main"]
 files = [
-    {file = "gitlike_commands-0.3.0-py3-none-any.whl", hash = "sha256:c262f8f532639ec8558369bdc2cd904bd0b65638834ed333c42a51be69578f21"},
-    {file = "gitlike_commands-0.3.0.tar.gz", hash = "sha256:72f4e65239cb6a4a2c614867c5f914b5d5994edd2863335515b543689b01ff70"},
+    {file = "gitlike_commands-0.3.1-py3-none-any.whl", hash = "sha256:9f29e196fb3f2cb0752f8e86de79bf2095980aed9e3aafe8422819a0dd0fb640"},
+    {file = "gitlike_commands-0.3.1.tar.gz", hash = "sha256:ceb56f6994a7485244da4d4a3a471ddcbfc7294ef922d967131595cc3090601d"},
 ]
 
 [[package]]
