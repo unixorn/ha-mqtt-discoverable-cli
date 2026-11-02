@@ -9,7 +9,7 @@ license = "Apache 2.0"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0.0"
-gitlike-commands = "^0.3.0"
+gitlike-commands = ">=0.3,<0.5"
 ha-mqtt-discoverable = "^0.25.2"
 
 [tool.poetry.group.dev.dependencies]
